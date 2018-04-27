@@ -1,0 +1,19 @@
+ [
+        {
+            "img":"imgs/navs-1.png",
+            "tit":"活动频道"
+        },
+        {
+            "img":"imgs/navs-2.png",
+            "tit":"小米闪购"
+        },
+        {
+            "img":"imgs/navs-3.png",
+            "tit":"好友拼团"
+        },
+        {
+            "img":"imgs/navs-4.png",
+            "tit":"小米分期"
+        }
+
+    ]

@@ -13,7 +13,7 @@
 <body>
     <div class="wrap">
         <header class="header">
-            <a href="#">
+            <a href="pase/page.html">
                 <i class="icon iconfont icon-fangdajing"></i>
                 <input type="text" name="" value="小米MIX 2S">
             </a>
@@ -32,23 +32,40 @@
                     </div>
                 </div>
             </div>
-            <div class="navs">
-                <div>
-                    <img src="imgs/navs-1.png" alt="">
-                    <i>活动顺讯</i>
-                </div>
-                <div>
-                    <img src="imgs/navs-2.png" alt="">
-                    <i>小米闪购</i>
-                </div>
-                <div>
-                    <img src="imgs/navs-3.png" alt="">
-                    <i>好有拼团</i>
-                </div>
-                <div>
-                    <img src="imgs/navs-4.png" alt="">
-                    <i>小米分期</i>
-                </div>
+            <div class="navs"></div>
+            <script type="text/x-handlebars-template" id="template">
+                {{#each this}}
+                    <div>
+                        <span><img src="{{img}}" alt=""></span>
+                        <i>{{tit}}</i>
+                    </div>
+                {{/each}}
+            </script>
+            <div class="block">
+                <dl>
+                    <dt><img src="imgs/dl-1.png" alt=""></dt>
+                    <dd>
+                        <h2>小米之家北京五彩城店</h2>
+                        <em>距离3.79公里</em>
+                    </dd>
+                </dl>
+                <span>
+                    其它零售店 >
+                </span>
+            </div>
+            <div class="pice"><img src="imgs/pice.png" alt=""></div>
+            <h1>商城早报</h1>
+             <div class="block">
+                <dl>
+                    <dt><img src="imgs/dl-1.png" alt=""></dt>
+                    <dd>
+                        <h2>小米之家北京五彩城店</h2>
+                        <em>距离3.79公里</em>
+                    </dd>
+                </dl>
+                <span>
+                    其它零售店 >
+                </span>
             </div>
         </section>
         <footer class="footer">
@@ -60,7 +77,10 @@
                 <i class="icon iconfont icon-zixun"></i>
                 分类
             </a>
-            <a href="#"></a>
+            <a href="#" class="center">
+                <i>小米5x 立减20</i>
+                发现
+            </a>
             <a href="#">
                 <i class="icon iconfont icon-gouwuche"></i>
                 购物车
@@ -78,6 +98,23 @@
         new Swiper(".big-box",{
             loop:true,
             autoplay:1000
+        })
+
+
+        $.ajax({
+            url:"info",
+            success:function(res){
+                var data = JSON.parse(res);
+                console.log(data)
+                var content = $("#template").html();
+                var template = Handlebars.compile(content);
+                var html = template(data);
+
+                $(".navs").html(html)
+            },
+            error:function(error){
+                console.log(error)
+            }
         })
     </script>
 </body>

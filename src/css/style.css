@@ -94,6 +94,8 @@ html,body,.wrap{
   width: 100%;
   display: flex;
   flex-wrap:wrap;
+  padding: .05rem 0;
+  border-bottom: 1px solid #CFCFCF;
 }
 
 .navs div{
@@ -105,14 +107,80 @@ html,body,.wrap{
 
 }
 .navs div img{
-  width:.45rem;
+  width:.35rem;
+}
+.navs div i{
+  font-size: .12rem;
 }
 
+
+.block{
+  width: 100%;
+  position:relative;
+}
+
+.block dl{
+  width: 100%;
+  height:.7rem;
+  padding: .05rem .1rem;
+  display: flex;
+  align-items:center;
+}
+.block dl dt{
+  width:.7rem;
+  height: .6rem;
+}
+
+.block dl dt img{
+  width:100%;
+  padding-top: .05rem;
+}
+
+.block dl dd{
+    flex:1;
+    padding-left:.1rem;
+}
+
+.block dl dd h2{
+    font-weight: 700;
+    line-height: 1.5;
+}
+.block dl dd em{
+    color:#8C8C8C;
+    font-size:.12rem;
+}
+.block span{
+  position:absolute;
+  right: .05rem;
+  top:.25rem;
+  color:#D8D8D8;
+    font-size:.12rem;
+}
+
+.pice{
+  width: 100%;
+  height: auto;
+}
+.pice img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+h1{
+  width: 100%;
+  height:.45rem;
+  font-size: .18rem;
+  font-weight:700;
+  line-height: .45rem;
+  padding-left:.1rem;
+}
 .footer{
   display: flex;
   width: 100%;
   height: .45rem;
   flex-wrap:wrap;
+  position:relative;
 }
 .footer a{
   width:20%;
@@ -126,4 +194,16 @@ html,body,.wrap{
   font-size: .2rem;
   color:#B7B7B7;
 
+}
+
+.center i{
+  width: .5rem;
+  height:.5rem;
+  background:#972764;
+  position:absolute;
+  top: -25px;
+  text-align: center;
+  line-height:.5rem;
+  border-radius: 50%;
+  font-size: .12rem;
 }
