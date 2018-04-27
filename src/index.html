@@ -8,6 +8,7 @@
     <meta name="format-detection" content="telephone=no,email=no,adress=no">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="i-con图标/font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 </head>
 <body>
     <div class="wrap">
@@ -20,6 +21,64 @@
                 <i class="icon iconfont icon-xiaoxi"></i>
             </a>
         </header>
+        <section class="content">
+            <div class="swiper-container big-box">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="imgs/1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="navs">
+                <div>
+                    <img src="imgs/navs-1.png" alt="">
+                    <i>活动顺讯</i>
+                </div>
+                <div>
+                    <img src="imgs/navs-2.png" alt="">
+                    <i>小米闪购</i>
+                </div>
+                <div>
+                    <img src="imgs/navs-3.png" alt="">
+                    <i>好有拼团</i>
+                </div>
+                <div>
+                    <img src="imgs/navs-4.png" alt="">
+                    <i>小米分期</i>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <a href="#">
+                <i class="icon iconfont icon-shouye"></i>
+                首页
+            </a>
+            <a href="#">
+                <i class="icon iconfont icon-zixun"></i>
+                分类
+            </a>
+            <a href="#"></a>
+            <a href="#">
+                <i class="icon iconfont icon-gouwuche"></i>
+                购物车
+            </a>
+            <a href="#">
+                <i class="icon iconfont icon-wode"></i>
+                我的
+            </a>
+        </footer>
     </div>
+    <script src="js/libs/jquery-2.1.1.min.js"></script>
+    <script src="js/libs/swiper.min.js"></script>
+    <script src="js/libs/handlebars.js"></script>
+    <script>
+        new Swiper(".big-box",{
+            loop:true,
+            autoplay:1000
+        })
+    </script>
 </body>
 </html>
